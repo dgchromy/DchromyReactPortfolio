@@ -9,18 +9,18 @@ function App() {
     <Layout style={{background: 'url(http://www.getmdl.io/assets/demos/transparent.jpg) center / cover'}}>
         <Header transparent title="Title" style={{color: 'white'}}>
             <Navigation>
-                <a href="/">Link</a>
-                <a href="/">Link</a>
-                <a href="/">Link</a>
-                <a href="/">Link</a>
+                <a href="Portfolio">Portfolio</a>
+                <a href="Projects">Projects</a>
+                <a href="Contact">Contact Me </a>
+                <a href="Resume">Resume</a>
             </Navigation>
         </Header>
         <Drawer title="Title">
             <Navigation>
-                <a href="/">Link</a>
-                <a href="/">Link</a>
-                <a href="/">Link</a>
-                <a href="/">Link</a>
+               <a href="Portfolio">Portfolio</a>
+                <a href="Mission">My Mission</a>
+                <a href="Contact">Contact Me </a>
+                <a href="Resume">Resume</a>
             </Navigation>
         </Drawer>
         <Content />
