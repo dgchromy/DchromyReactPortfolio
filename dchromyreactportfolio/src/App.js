@@ -1,32 +1,41 @@
+import React, { Component } from 'react';
+import Main from './components/main';
 import './App.css';
-import React, { Component } from "react";
 import { Layout, Header, Navigation, Drawer, Content } from "react-mdl"; 
+import { Link } from 'react-router-dom';
 
-function App() {
-  return (
-    <div style={{height: '300px', position: 'relative'}}>
-      <h1> hello world </h1>
-    <Layout style={{background: 'url(http://www.getmdl.io/assets/demos/transparent.jpg) center / cover'}}>
-        <Header transparent title="Title" style={{color: 'white'}}>
+
+
+class App extends Component {
+  render() {
+    return (
+      <div className="demo-big-content">
+    <Layout>
+        <Header className="header-color" title={<Link style={{textDecoration: 'none', color: 'white'}} to="/">MyPortfolio</Link>} scroll>
             <Navigation>
-                <a href="Portfolio">Portfolio</a>
-                <a href="Projects">Projects</a>
-                <a href="Contact">Contact Me </a>
-                <a href="Resume">Resume</a>
+            <Link to="/resume">Resume</Link>
+              <Link to="/Mission">Mission</Link>
+              <Link to="/Portfolio">Portfolio</Link>
+              <Link to="/Contact">Contact</Link>
             </Navigation>
         </Header>
-        <Drawer title="Title">
+        <Drawer title={<Link style={{textDecoration: 'none', color: 'black'}} to="/">MyPortfolio</Link>}>
             <Navigation>
-               <a href="Portfolio">Portfolio</a>
-                <a href="Mission">My Mission</a>
-                <a href="Contact">Contact Me </a>
-                <a href="Resume">Resume</a>
+              <Link to="/resume">Resume</Link>
+              <Link to="/Mission">Mission</Link>
+              <Link to="/Portfolio">Portfolio</Link>
+              <Link to="/Contact">Contact</Link>
             </Navigation>
         </Drawer>
-        <Content />
+        <Content>
+            <div className="page-content" />
+            <Main/>
+        </Content>
     </Layout>
 </div>
-  );
+
+    );
+  }
 }
 
 export default App;
