@@ -1,38 +1,30 @@
 import React, { Component } from 'react';
-import Main from './components/main';
+// import Main from './components/main';
 import './App.css';
-import { Layout, Header, Navigation, Drawer, Content } from "react-mdl"; 
-import { Link } from 'react-router-dom';
-
-
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Contact from './components/Contact';
+import Landing from './components/landingpage';
+import Portfolio from './components/Portfolio';
+import Mission from './components/Mission';
+import Resume from './components/Resume';
 
 class App extends Component {
   render() {
     return (
-      <div className="demo-big-content">
-    <Layout>
-        <Header className="header-color" title={<Link style={{textDecoration: 'none', color: 'white'}} to="/">MyPortfolio</Link>} scroll>
-            <Navigation>
-            <Link to="/resume">Resume</Link>
-              <Link to="/Mission">Mission</Link>
-              <Link to="/Portfolio">Portfolio</Link>
-              <Link to="/Contact">Contact</Link>
-            </Navigation>
-        </Header>
-        <Drawer title={<Link style={{textDecoration: 'none', color: 'black'}} to="/">MyPortfolio</Link>}>
-            <Navigation>
-              <Link to="/resume">Resume</Link>
-              <Link to="/Mission">Mission</Link>
-              <Link to="/Portfolio">Portfolio</Link>
-              <Link to="/Contact">Contact</Link>
-            </Navigation>
-        </Drawer>
-        <Content>
-            <div className="page-content" />
-            <Main/>
-        </Content>
-    </Layout>
-</div>
+     
+  
+      <Router>
+      <div>
+        <Switch>
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/contact" component={Contact} />
+          <Route exact path="/portfolio" component={Portfolio} />
+          <Route exact path="/mission" component={Mission} />
+          <Route exact path="/resume" component={Resume} />
+        </Switch>
+      </div>
+      </Router>
+    
 
     );
   }

@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
+import Nav from "./Nav"
 
-
-class About extends Component {
+class Mission extends Component {
   render() {
     return(
-      <div><h1>About Page</h1></div>
+        <div> 
+
+            <Nav/>
+      <div></div>
+      </div>
     )
   }
 }
 
-export default About;
+export default Mission;

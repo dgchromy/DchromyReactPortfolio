@@ -1,19 +1,23 @@
 import React, { Component } from 'react';
 import { Grid, Cell, List, ListItem, ListItemContent } from 'react-mdl';
-
+import Nav from "./Nav"
 
 class Contact extends Component {
   render() {
     return(
+        <div>
+            <Nav/>
       <div className="contact-body">
         <Grid className="contact-grid">
           <Cell col={6}>
             <h2>Donald Chromy</h2>
-            <img
-              src="dchromyreactportfolio/public/images/tosh and i .jpg"
+            
+             <script src= "dchromyreactportfolio/public/images/toshAndI.jpg" 
               alt=""
               style={{height: '250px'}}
-               />
+              ></script>
+
+            
              <p style={{ width: '75%', margin: 'auto', paddingTop: '1em'}}></p>
 
           </Cell>
@@ -41,6 +45,7 @@ class Contact extends Component {
             </div>
           </Cell>
         </Grid>
+      </div>
       </div>
     )
   }

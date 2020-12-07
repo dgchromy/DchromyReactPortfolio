@@ -1,14 +1,16 @@
-import React, { Components } from 'react';
+import React, { Component } from 'react';
 import { Grid, Cell } from 'react-mdl';
+import Nav from "./Nav";
 
-
-class Landing extends Components {
+class Landing extends Component {
   render() {
-    return(
+    return(   
+<div>
+<Nav/>
       <div style={{width: '100%', margin: 'auto'}}>
         <Grid className="landing-grid">
           <Cell col={12}>
-        
+         
 
             <div className="banner-text">
               <h1>Full Stack Web Developer</h1>
@@ -43,8 +45,10 @@ class Landing extends Components {
           </Cell>
         </Grid>
       </div>
+      </div>
     )
   }
 }
 
 export default Landing;
+
